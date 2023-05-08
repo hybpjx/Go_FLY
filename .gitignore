@@ -19,3 +19,7 @@
 
 # Go workspace file
 go.work
+
+gofly_front/node_modules
+
+GoFly_backend/log

@@ -1,0 +1,37 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "ts+gin 开发实战",
+        "title": "Go-web 开发",
+        "contact": {},
+        "version": "0.0.1"
+    },
+    "paths": {
+        "/api/v1/public/user/login": {
+            "post": {
+                "description": "用户登录详情表述",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "用户登录",
+                "responses": {
+                    "200": {
+                        "description": "登入成功",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "401": {
+                        "description": "登入失败",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+mode:
+  development: true
+
+server:
+  port: 8090
+
+log:
+  # 每个日志文件保存1M，默认 100M 超出自动分割
+  MaxSize: 1
+  # 保留30个备份，默认不限
+  MaxBackups: 30
+  # 保留28天，默认不限
+  MaxAge: 28
+  # 是否压缩，默认不压缩
+  Compress: false
+
+db:
+  dsn: "root:admin*123@tcp(127.0.0.1:3306)/gofly?charset=utf8mb4&parseTime=True&loc=Local"
+  # 最多空闲连接数
+  MaxIdleConn: 10
+  # 最多打开连接数
+  MaxOpenConn: 10
+  # 设置连接可重用的最大时间
+  ConnMaxLifetime: 60 * 60
+
+redis:
+  Addr: 192.168.2.55:6379
+  Password: "admin*123"
+
+jwt:
+  # token的有效时长 （分钟）
+  TokenExpire: 3
+  # 签名使用的秘钥
+  SignKey: gofly.cn
+
+
+# 用于系统启动 与关机
+ansible:
+  # 用户
+  user:
+    # 用户名
+    name: root
+    # 密码
+    password: 123
+  # 关机 指令
+  shutdownHost:
+    args: "poweroff"
+
