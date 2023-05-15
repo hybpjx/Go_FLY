@@ -2,7 +2,14 @@
 </script>
 
 <template>
-  test
+  <div class="app-w">
+    {{ app.getConfig("baseUrl") }}
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.app-w {
+  display: flex;
+  color: red;
+}
+</style>
